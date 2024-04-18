@@ -12,7 +12,7 @@ const FirstHeader = () => {
           <p className={s.discount}>
             <span>
               Summer Sale For All Swim Suits And Free Express Delivery - OFF
-              50%!
+              70%!
             </span>
             <Link to="/products">ShopNow</Link>
           </p>
