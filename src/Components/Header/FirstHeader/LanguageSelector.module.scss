@@ -1,0 +1,109 @@
+@import "src/Styles/mixins";
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: -2px;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed var(--orange-degree2);
+    outline-offset: 0;
+
+    .currentOption span {
+      color: var(--orange-degree2);
+    }
+
+    &>svg {
+      fill: var(--orange-degree2);
+    }
+  }
+}
+
+@include small {
+  .languageSelector {
+    margin-right: 37px;
+  }
+}
+
+.languageSelector .currentOption {
+  min-width: 63px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 11px;
+  background-color: transparent;
+  padding-right: 10px;
+}
+
+.currentOption>span {
+  width: 67.4px;
+}
+
+.currentOption>img {
+  width: 22px;
+  min-width: 22px;
+  object-fit: contain;
+}
+
+.languageSelector>svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--white);
+}
+
+.languageSelector .menu {
+  position: absolute;
+  left: -1.6px;
+  top: 41.8px;
+  background-color: var(--black);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.languageSelector .menu .option {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 11px;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: -4px;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed var(--orange-degree2);
+    outline-offset: -2px;
+
+    &>span {
+      color: var(--orange-degree2);
+    }
+  }
+
+  &:hover {
+    color: var(--black);
+    background-color: var(--white);
+  }
+}
+
+.option>span {
+  width: 70px;
+}
+
+.option>img {
+  width: 22px;
+  object-fit: contain;
+}

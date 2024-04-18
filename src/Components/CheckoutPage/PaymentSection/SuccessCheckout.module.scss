@@ -1,0 +1,75 @@
+/* ThankYouModal.css */
+.modal {
+    position: absolute; /* Position the modal */
+    z-index: 1; /* Ensure it's on top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+   
+    width: 100%;
+  }
+  
+  .modalContent {
+    background-color: #fefefe; /* White background */
+    margin: 15% auto; /* Center the modal */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 500px;
+    text-align: center;
+    width: 80%; /* Set the width of the modal */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    max-width: 100%;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+  .modalContent>button {
+    border: none;
+    outline: none;
+    padding: 16px 48px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--white);
+    margin-top: 30px;
+    background: var(--orange-degree2);
+    transition: background .2s;
+    border: solid 2px var(--orange-degree2);
+ 
+    &:hover {
+      background-color: var(--white);
+      color: var(--orange-degree2);
+    }
+  
+    &:active {
+      scale: var(--button-active-scale);
+    }
+  }
